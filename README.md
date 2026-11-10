@@ -1,85 +1,69 @@
-# SokoMart – Advanced SQL Project
+# SokoMart Kenya – Advanced SQL Practical Project
 
-## Day 1 – Advanced SQL
+## Project Overview
 
-### Project Overview
+This project focuses on applying advanced SQL concepts to analyse retail business data for SokoMart Kenya.
 
-This project is part of the LuxDevHQ Cohort 9 Advanced SQL programme. It uses PostgreSQL to practise database management, SQL querying, subqueries, Common Table Expressions (CTEs), functions and stored procedures.
+The project uses PostgreSQL to explore customer behaviour, sales performance, product revenue and other business-related questions through practical SQL queries.
 
-### Database Details
+## Tools and Technologies
 
-- **Database:** `luxdevhq_cohort9_advanced_sql`
-- **Schema:** `sokomart`
-- **DBMS:** PostgreSQL 18.6
-- **SQL Client:** DBeaver
+- PostgreSQL 18.6
+- DBeaver
+- Git and GitHub
 
-### Database Setup
+## Project Progress
 
-The PostgreSQL database, schema and tables were created and populated locally.
+### Day 1 – Database Setup and Basic SQL
 
-The database validation script (`06_validation.sql`) was executed successfully, with all 41 checks passing.
+Completed:
+- Database and schema creation.
+- Table creation and data loading.
+- Index creation.
+- Database validation.
+- SQL practice drills (D1–D10).
+- Section A: Questions 1–5.
 
-### Day 1 SQL Exercises
+### Day 2 – Window Functions
 
-#### Practice Drills
+Completed Section B: Questions 6–10.
 
-**File:** `sql/00_practice_drills.sql`
+Concepts applied include:
+- Common Table Expressions (CTEs).
+- `ROW_NUMBER()` and `DENSE_RANK()`.
+- `LAG()` window function.
+- `PARTITION BY` and `ORDER BY`.
+- Running totals using window frames.
+- Month-over-month revenue growth.
+- Year-to-date and cumulative revenue analysis.
 
-Contains ten practice exercises (D1–D10) covering:
-
-- Scalar and correlated subqueries
-- `IN` and `EXISTS`
-- Derived tables
-- Common Table Expressions (CTEs)
-- Aggregate functions
-- SQL functions
-- Stored procedures
-- Transaction management and rollback
-
-#### Section A – CTEs and Subqueries
-
-**File:** `sql/01_section_a.sql`
-
-Contains Questions 1–5 covering:
-
-- Customer spending analysis
-- Premium product identification
-- Monthly profit and loss analysis
-- Cross-category customer analysis
-- Products that have never been ordered
-
-### Screenshots
-
-Execution evidence for the Day 1 exercises is stored in the `screenshots/` directory.
-
-The screenshots document the results of the practice drills and Section A exercises.
-
-### How to Run the SQL Files
-
-1. Install and start PostgreSQL.
-2. Connect to the `luxdevhq_cohort9_advanced_sql` database using DBeaver.
-3. Ensure the active schema is `sokomart`.
-4. Open the relevant SQL file from the `sql/` directory.
-5. Execute the SQL statements and inspect the results in the DBeaver results grid.
-
-### Project Structure
+## Repository Structure
 
 ```text
-soko-mart-project/
+soko-mart/
 │
 ├── sql/
 │   ├── 00_practice_drills.sql
-│   └── 01_section_a.sql
+│   ├── 01_section_a.sql
+│   └── 02_section_b.sql
 │
 ├── screenshots/
-│   └── Day 1 exercise screenshots
+│   └── Query result screenshots
 │
 └── README.md
 ```
 
-### Technologies Used
+## Project Status
 
-- PostgreSQL
-- SQL
-- DBeaver
-- Git and GitHub
+**In Progress**
+
+- [x] Day 1 – Database setup and Section A
+- [x] Day 2 – Section B: Window Functions
+- [ ] Day 3 – Sections C and D
+- [ ] Day 4 – Section E, business insights and final documentation
+
+## Author
+
+**Victoria Suewama Ndei**
+
+LuxDevHQ – Cohort 9
