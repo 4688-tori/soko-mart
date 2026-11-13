@@ -201,6 +201,50 @@ Through Day 3, I gained practical experience in:
 - Managing inventory through conditional updates.
 - Handling exceptions and transaction rollbacks.
 - Testing database operations and validating business rules.
+  ## Day 4: Performance Optimization, Transactions & Data Integrity
+
+### Section E: Advanced SQL (Q21–Q25)
+
+This section covers query execution plans, index optimization, transaction management, payment deduplication, and customer retention analysis.
+
+#### Q21: Query Execution Plan Analysis
+- Used `EXPLAIN ANALYZE` to inspect query execution.
+- Analysed execution methods, scan types, estimated rows, actual rows, planning time, and execution time.
+- The Kisumu customer sales query returned 91 customers for September 2026.
+
+#### Q22: Index Performance Optimization
+- Compared query execution before and after creating supporting indexes.
+- Tested customer, payment, and product lookups.
+- Tested a partial index for pending orders.
+- Compared index storage sizes.
+
+| Query | Before | After |
+|---|---:|---:|
+| Customer lookup | 8.796 ms | 0.148 ms |
+| Payment lookup | 22.241 ms | 0.128 ms |
+| Product lookup | 28.138 ms | 0.770 ms |
+
+The partial-index query used the composite `idx_orders_status_date` index rather than the partial index.
+
+#### Q23: Transaction Management
+- Demonstrated transaction rollback after a temporary Beauty category price reduction.
+- Tested SAVEPOINT and partial rollback during product restocking.
+- Tested a stock constraint violation and transaction recovery.
+- Verified the final stock quantities for products 59 and 166.
+
+#### Q24: Payment Staging Deduplication
+- Identified 240 extra duplicate rows among 2,640 staging records.
+- Retained 2,400 distinct payment records.
+- Verified matching payment totals of KSh 60,184,108.05.
+- Created a unique index on `payment_id`.
+- Confirmed that PostgreSQL rejects duplicate payment IDs with SQLSTATE `23505`.
+
+#### Q25: Customer Retention Analysis
+- Used a gaps-and-islands approach to identify consecutive monthly purchasing activity.
+- Identified 1,459 customers with at least three consecutive months of completed orders.
+- The longest consecutive-month purchasing streak was 22 months.
+- Ranked the top 10 customers by their longest retention streak.
+
 
 ### Repository
 GitHub: https://github.com/4688-tori/soko-mart
