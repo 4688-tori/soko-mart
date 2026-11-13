@@ -564,23 +564,26 @@ The following rules were applied throughout the project:
 The repository is organised around the SQL exercises, supporting documentation, and evidence screenshots.
 
 ```text
+## Project Structure
+
+```text
 soko-mart/
 │
 ├── README.md
 │
 ├── sql/
+│   ├── 00_practice_drills.sql
+│   ├── 01_section_a.sql
 │   ├── 02_section_b.sql
 │   ├── 03_section_c.sql
 │   ├── 04_section_d.sql
-│   └── 05_section_e.sql
+│   ├── 05_section_e.sql
+│   └── 05_indexes.sql
 │
-├── screenshots/
-│   ├── Day 1/
-│   ├── Day 2/
-│   ├── Day 3/
-│   └── Day 4/
-│
-└── [Other project files and database setup documentation]
+└── screenshots/
+    └── All project screenshots (Day 1–Day 4)
+```
+]
 ```
 
 *The directory tree is a high-level representation. Check the repository for the exact names and locations of additional setup files and screenshots.*
